@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineMvcDemo", "MineMvcDemo\MineMvcDemo.csproj", "{35B05643-B6F7-47D2-A099-B7882FD66619}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentation", "1.Presentation", "{00DF1515-B58A-49FB-9B77-90247AC06208}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Application", "2.Application", "{252AC6D5-A56A-49A1-B17C-A331A5111F83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Service", "3.Service", "{7ACE293A-28FD-4C21-8960-F94F52176049}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Infrastructure", "5.Infrastructure", "{F49FDA73-2D10-46C6-BF1A-F2FE89D716D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Modules", "1.Modules", "{EB797F01-0285-47A2-BA4F-C056B9DCB925}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Common", "2.Common", "{5E6C8502-ED7A-4413-A156-E46F10F1FEA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMD.App.User", "MMD.App.User\MMD.App.User.csproj", "{5BE3AF9C-3A5E-4D60-ACCE-286D9BB2ABB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMD.App.Dto.User", "MMD.App.Dto.User\MMD.App.Dto.User.csproj", "{935CF6B4-3414-4B5E-B061-5A70B368D117}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Data", "4.Data", "{73B11509-0A08-447A-BDF5-30EFD3583808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMD.Data.Entity", "MMD.Data.Entity\MMD.Data.Entity.csproj", "{979A92F1-E8BC-478C-B0CF-4484D7288931}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35B05643-B6F7-47D2-A099-B7882FD66619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35B05643-B6F7-47D2-A099-B7882FD66619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35B05643-B6F7-47D2-A099-B7882FD66619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35B05643-B6F7-47D2-A099-B7882FD66619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE3AF9C-3A5E-4D60-ACCE-286D9BB2ABB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE3AF9C-3A5E-4D60-ACCE-286D9BB2ABB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE3AF9C-3A5E-4D60-ACCE-286D9BB2ABB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE3AF9C-3A5E-4D60-ACCE-286D9BB2ABB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{935CF6B4-3414-4B5E-B061-5A70B368D117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935CF6B4-3414-4B5E-B061-5A70B368D117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935CF6B4-3414-4B5E-B061-5A70B368D117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935CF6B4-3414-4B5E-B061-5A70B368D117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{979A92F1-E8BC-478C-B0CF-4484D7288931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{979A92F1-E8BC-478C-B0CF-4484D7288931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{979A92F1-E8BC-478C-B0CF-4484D7288931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{979A92F1-E8BC-478C-B0CF-4484D7288931}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35B05643-B6F7-47D2-A099-B7882FD66619} = {00DF1515-B58A-49FB-9B77-90247AC06208}
+		{EB797F01-0285-47A2-BA4F-C056B9DCB925} = {252AC6D5-A56A-49A1-B17C-A331A5111F83}
+		{5E6C8502-ED7A-4413-A156-E46F10F1FEA6} = {252AC6D5-A56A-49A1-B17C-A331A5111F83}
+		{5BE3AF9C-3A5E-4D60-ACCE-286D9BB2ABB7} = {EB797F01-0285-47A2-BA4F-C056B9DCB925}
+		{935CF6B4-3414-4B5E-B061-5A70B368D117} = {EB797F01-0285-47A2-BA4F-C056B9DCB925}
+		{979A92F1-E8BC-478C-B0CF-4484D7288931} = {73B11509-0A08-447A-BDF5-30EFD3583808}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {911A4155-E8A2-4AAD-98FE-F4EE00473019}
+	EndGlobalSection
+EndGlobal
