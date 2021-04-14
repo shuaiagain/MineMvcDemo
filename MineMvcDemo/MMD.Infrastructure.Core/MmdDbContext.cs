@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using MMD.Data.Entity;
+using MMD.Data.Entity.User;
 
 namespace MMD.Infrastructure.Core
 {

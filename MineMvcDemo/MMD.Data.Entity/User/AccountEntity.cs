@@ -8,7 +8,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MMD.Data.Entity
+namespace MMD.Data.Entity.User
 {
     [Description("登录表")]
     [Table("usr_Account")]

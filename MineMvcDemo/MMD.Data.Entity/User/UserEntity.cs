@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-namespace MMD.Data.Entity
+namespace MMD.Data.Entity.User
 {
     [Table("usr_User")]
     [Description("人员表")]
@@ -15,6 +15,7 @@ namespace MMD.Data.Entity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [ForeignKey("Account")]
         [Description("人员id")]
         public int UserId { get; set; }
 
@@ -44,13 +45,12 @@ namespace MMD.Data.Entity
         [Description("修改人id")]
         public DateTime LastModifyId { get; set; }
 
-        [ForeignKey("AccountId")]
         [Description("登录账号")]
         public AccountEntity Account { get; set; }
-     
+
         /// <summary>
         /// 登录账号id
         /// </summary>
-        public int? AccountId { get; set; }
+        public int AccountId { get; set; }
     }
 }
