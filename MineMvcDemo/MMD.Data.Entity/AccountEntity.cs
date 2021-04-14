@@ -4,51 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MMD.Data.Entity
 {
-    /// <summary>
-    /// 登录表
-    /// </summary>
+    [Description("登录表")]
+    [Table("usr_Account")]
     public class AccountEntity
     {
-        /// <summary>
-        /// 登录账号id
-        /// </summary>
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Description("登录账号id")]
         public int AccountId { get; set; }
 
-        /// <summary>
-        /// 登录名称
-        /// </summary>
+        [Required]
+        [StringLength(50)]
+        [Description("登录名称")]
         public string AccountName { get; set; }
 
-        /// <summary>
-        /// 密码
-        /// </summary>
+        [Required]
+        [StringLength(50)]
+        [Description("密码")]
         public string Passwd { get; set; }
 
-        /// <summary>
-        /// 人员id
-        /// </summary>
-        public int EmployeeId { get; set; }
-
-        /// <summary>
-        /// 创建时间
-        /// </summary>
+        [Description("创建时间")]
         public DateTime CreateTime { get; set; }
 
-        /// <summary>
-        /// 创建人id
-        /// </summary>
+        [Description("创建人id")]
         public int CreatorId { get; set; }
 
-        /// <summary>
-        /// 修改时间
-        /// </summary>
+        [Description("修改时间")]
         public DateTime LastModifyTime { get; set; }
 
-        /// <summary>
-        /// 修改人id
-        /// </summary>
+        [Description("修改人id")]
         public DateTime LastModifyId { get; set; }
+
+        [Description("人员信息")]
+        public UserEntity User { get; set; }
     }
 }
