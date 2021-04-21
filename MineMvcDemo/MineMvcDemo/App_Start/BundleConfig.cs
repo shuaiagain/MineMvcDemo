@@ -24,12 +24,17 @@ namespace MineMvcDemo
             //          "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                    "~/Content/plugins/jquery/jquery-{version}.js"));
+                    "~/Content/plugins/jquery/jquery-{version}.js",
+                    "~/Content/plugins/layui/layui.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/css/base.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include
+                ("~/Content/plugins/base.css",
+                "~/Content/plugins/layui/css/layui.css"
+                ));
 
             //可以覆盖web.config中compilation标签的设置
             //<compilation debug="true" targetFramework="4.6.1"/>
+            //启用压缩、打包
             BundleTable.EnableOptimizations = true;
         }
     }
