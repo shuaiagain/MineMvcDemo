@@ -8,3 +8,7 @@ body, div, form, img, dl, dt, tr, td, dd, ul, li, h1, h2, h3, h4, input, p, a, f
     padding: 0;
     font-size: 100%;
 }
+
+ul {
+    list-style: none;
+}

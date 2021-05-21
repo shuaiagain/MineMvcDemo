@@ -1,0 +1,133 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Login";
+}
+
+@section head{
+    <style type="text/css">
+        .login-bg {
+            background: #fff;
+        }
+
+        .login-head {
+            position: relative;
+        }
+
+            .login-head .head-title:hover {
+                color: #333;
+            }
+
+        .login-wrap .login-content {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .login-wrap .login-head {
+            height: 48px;
+            line-height: 48px;
+            padding: 0px 20px;
+            font-size: 24px;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .login-wrap .close-btn:hover {
+            background: url(../../Content/img/login/close_hov.png) no-repeat;
+            cursor:pointer;
+        }
+
+        .login-wrap .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            display: block;
+            height: 24px;
+            line-height: 24px;
+            width: 24px;
+            background: url(../../Content/img/login/close_def.png) no-repeat;
+        }
+
+        .login-content .content-item {
+            margin-top: 20px;
+        }
+
+            .login-content .content-item input {
+                height: 36px;
+                width: 240px;
+                border: 1px solid #dbdbdb;
+                color: #333;
+                text-indent: 24px;
+            }
+
+                .login-content .content-item input.login-username {
+                    background: url(../../Content/img/login/zhanghu.png) no-repeat;
+                    background-position:5px;
+                }
+
+                .login-content .content-item input.login-pwd {
+                    background: url(../../Content/img/login/mima-1.png) no-repeat;
+                    background-position: 5px;
+                }
+    </style>
+}
+
+<div class="login-bg">
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            //登录url
+            var loginUrl = '../Account/Login';
+            var loginHtml = '<div class="login-wrap">'+
+                                            '<div class="login-head">'+
+                                                '<a class="head-title">登录</a>'+
+                                                '<a class="close-btn"></a>'+
+                                            '</div>'+
+                                            '<div class="login-content">'+
+                                                '<form>'+
+                                                    '<ul class="content-list">'+
+                                                        '<li class="content-item">'+
+                                                            '<input type="text" name="login-username" class="login-username" value="" placeholder="请输入用户名" />'+
+                                                        '</li>'+
+                                                        '<li class="content-item">'+
+                                                            '<input type="text" name="login-pwd" class="login-pwd" value="" placeholder="请输入密码" />'+
+                                                        '</li>'+
+                                                    '</ul>'+
+                                                '</form>'+
+                                            '</div>'+
+                                       '</div>';
+
+
+            var openParam = {
+                title: false,
+                type: 1,
+                skin: 'login-layer',
+                area: ['400px', '260px'],
+                closeBtn: false,
+                shade: 0.6,
+                move: false,
+                offset: ['100px'],
+                content: loginHtml,
+                btn: ['登 录'],
+                btnAlign: 'c',
+                yes: function (index, layero) {
+
+                    debugger;
+                    layero;
+
+                },
+                success: function (layero, index) {
+                }
+            }
+
+            layer.open(openParam);
+
+            //登录
+            function login() {
+                $.post(loginUrl,);
+            }
+        });
+    </script>
+}

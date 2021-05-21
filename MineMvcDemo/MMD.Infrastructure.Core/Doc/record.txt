@@ -6,4 +6,3 @@
 	3.2添加迁移：Add-Migration 迁移名称
     3.3更新数据库：Update-Database
 	3.4完成上述操作数据库和表就都生成了
-
