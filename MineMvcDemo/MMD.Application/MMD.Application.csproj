@@ -4,13 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{979A92F1-E8BC-478C-B0CF-4484D7288931}</ProjectGuid>
+    <ProjectGuid>{F33FA4A4-E774-4F2E-A376-1F60F353FDE4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MMD.Data.Entity</RootNamespace>
-    <AssemblyName>MMD.Data.Entity</AssemblyName>
+    <RootNamespace>MMD.Application</RootNamespace>
+    <AssemblyName>MMD.Application</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,13 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Interfaces\IUserRepository.cs" />
-    <Compile Include="User\AccountEntity.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Interfaces\IUserServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User\RoleEntity.cs" />
-    <Compile Include="User\UserEntity.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="ViewModels\UserVM.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MMD.Data.Entity\MMD.Data.Entity.csproj">
+      <Project>{979a92f1-e8bc-478c-b0cf-4484d7288931}</Project>
+      <Name>MMD.Data.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMD.Infrastructure.Data\MMD.Infrastructure.Data.csproj">
+      <Project>{3ee26f7a-25da-4441-921f-0e5a1dea8718}</Project>
+      <Name>MMD.Infrastructure.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
